@@ -1,6 +1,9 @@
 import React from 'react'
 import { Nav, Navbar, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button, Table, ButtonGroup, Grid, Panel, FormGroup, FormControl } from 'react-bootstrap';
 import { Container, Row, Col, Form } from 'react-bootstrap';
+
+import CartWidget from './CartWidget'
+
 function NavBar() {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -28,8 +31,8 @@ function NavBar() {
                     </Nav>
                     <Nav>
                         <Nav.Link href="">Contacto</Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
-                            Carrito
+                        <Nav.Link eventKey={2} href="">
+                            <CartWidget/>
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
