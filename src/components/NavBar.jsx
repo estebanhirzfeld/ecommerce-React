@@ -2,7 +2,9 @@ import React from 'react'
 import { Nav, Navbar, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button, Table, ButtonGroup, Grid, Panel, FormGroup, FormControl } from 'react-bootstrap';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 
-import CartWidget from './CartWidget'
+import ItemCounter from './ItemCounter'
+import { carritoValue } from './ItemCounter'
+
 
 function NavBar() {
     return (
@@ -32,7 +34,7 @@ function NavBar() {
                     <Nav>
                         <Nav.Link href="">Contacto</Nav.Link>
                         <Nav.Link eventKey={2} href="">
-                            <CartWidget/>
+                            {carritoValue}
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
