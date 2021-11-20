@@ -1,14 +1,13 @@
 import React from 'react'
 import NavBar from './components/NavBar'
-import GridContainer from './components/GridContainer'
-import Card from './components/Card'
+import CardContainer from './components/CardContainer'
 
 
 function App() {
   return (
     <div>
       <NavBar/>
-      <GridContainer/>
+      <CardContainer/>
     </div>
   )
 }

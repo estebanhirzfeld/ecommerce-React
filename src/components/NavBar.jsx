@@ -1,10 +1,10 @@
 import React from 'react'
-import { Nav, Navbar, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button, Table, ButtonGroup, Grid, Panel, FormGroup, FormControl } from 'react-bootstrap';
-import { Container, Row, Col, Form } from 'react-bootstrap';
+import { Nav, Navbar, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button, Table, ButtonGroup, Grid, Panel, FormGroup, FormControl, Container, Row, Col, Form } from 'react-bootstrap';
 
 import ItemCounter from './ItemCounter'
-import { carritoValue } from './ItemCounter'
+import SearchBar from './SearchBar'
 
+import {data} from '../JSON/FalseJson'
 
 function NavBar() {
     return (
@@ -30,11 +30,13 @@ function NavBar() {
                             <NavDropdown.Item href="#action/3.4">Huawei</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.4">Sony</NavDropdown.Item>
                         </NavDropdown>
+                        <SearchBar
+                        products={data}
+                        />
                     </Nav>
                     <Nav>
                         <Nav.Link href="">Contacto</Nav.Link>
                         <Nav.Link eventKey={2} href="">
-                            {carritoValue}
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
@@ -44,3 +46,4 @@ function NavBar() {
 }
 
 export default NavBar
+
