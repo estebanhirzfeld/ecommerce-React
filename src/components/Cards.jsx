@@ -2,13 +2,13 @@ import React from 'react';
 
 import Card from './Card'
 
-class Cards extends React.Component {
-    render() {
+function Cards(props){
+
         return (
-            this.props.products.length > 0 
+            props.products.length > 0 
                 ?
 
-                this.props.products.map((product,index) =>
+                props.products.map((product,index) =>
                 <Card
                 key={index}
                 title={product.title}
@@ -20,7 +20,10 @@ class Cards extends React.Component {
                 :
                 <p>No se Encontraron Productos</p>        
         )
-    }
+
 }
 
 export default Cards
+
+
+

@@ -6,22 +6,24 @@ import { Container, Row, Col, Form } from 'react-bootstrap';
 import ItemCounter from './ItemCounter'
 
 
-class Card extends React.Component {
-    render() {
+function Card (props){
         return (
             <div className="col-6 col-sm-4 col-md-4 col-lg-3">
                 <div className="overflow-hidden">
-                    <img className="w-100 cardImage" src={this.props.image} alt="" />
+                    <img className="w-100 cardImage" src={props.image} alt="" />
                 </div>
-                    <span>{this.props.title}</span>
-                    <span>Stock: {this.props.stock}</span>
+                    <span>{props.title}</span>
+                    <span>Stock: {props.stock}</span>
                     <ItemCounter/>
             </div>
         )
-    }
-    
 }
 
 
 
 export default Card
+
+
+
+
+
