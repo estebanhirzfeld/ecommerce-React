@@ -25,7 +25,7 @@ function ItemCounter() {
     const AgregarAlCarrito = () => {
         switch(itemCount) {
             case 0:
-                alert("Seleccione la Cant de Productos que Quiere Agregar al Carrito")
+                alert("Seleccione la Cantidad de Productos que Quiere Agregar al Carrito")
                 break;
             case 1:
                 alert("Se Agrego " + itemCount + " Producto al Carrito")
