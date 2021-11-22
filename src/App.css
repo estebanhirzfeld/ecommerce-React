@@ -9,14 +9,14 @@
     transform: scale(1.1);
 }
 
-.rounded-border-both-20px{
+.botonCarrito{
     border-radius: 20px;
 }
-.rounded-border-left-20px{
+.botonDecrementar{
     border-radius: 20px 0px 0px 20px;
 }
 
-.rounded-border-right-20px{
+.botonIncrementar{
     border-radius:  0px 20px 20px 0px;
 }
 

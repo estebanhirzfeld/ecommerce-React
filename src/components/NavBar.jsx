@@ -30,9 +30,7 @@ function NavBar() {
                             <NavDropdown.Item href="#action/3.4">Huawei</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.4">Sony</NavDropdown.Item>
                         </NavDropdown>
-                        <SearchBar
-                        products={data}
-                        />
+                        <SearchBar/>
                     </Nav>
                     <Nav>
                         <Nav.Link href="">Contacto</Nav.Link>
