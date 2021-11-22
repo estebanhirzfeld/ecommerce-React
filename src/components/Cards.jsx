@@ -2,23 +2,23 @@ import React from 'react';
 
 import Card from './Card'
 
-function Cards(props){
+function Cards(props) {
 
         return (
-            props.products.length > 0 
-                ?
+                props.products.length > 0
+                        ?
 
-                props.products.map((product,index) =>
-                <Card
-                key={index}
-                title={product.title}
-                image={product.image}
-                stock={product.stock}
-                />
-                )
+                        props.products.map((product, index) =>
+                                <Card
+                                        key={index}
+                                        title={product.title}
+                                        image={product.image}
+                                        stock={product.stock}
+                                />
+                        )
 
-                :
-                <p>No se Encontraron Productos</p>        
+                        :
+                        <p>No se Encontraron Productos</p>
         )
 
 }
