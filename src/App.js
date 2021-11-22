@@ -7,19 +7,19 @@ import ItemDetailContainer from './components/ItemDetailConteiner'
 
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
 
-// import FalseFetch from './components/FalseFetch'
+import FalseFetch from './components/FalseFetch'
 
 import { data } from './JSON/FalseJson'
 
 function App() {
-    // const [data, setData] = useState([]);
+    const [data, setData] = useState([]);
 
-    // useEffect(() => {
-    //     FalseFetch()
-    //         .then(datos => setData(datos))
-    //         .catch(err => console.log(err))
-    //         .finally(() => console.log("llego esta data: " + data))
-    // },[]);                                                                      //Por Alguna Razon No Funciona el False Fetch, sospecho que tiene que ver con el Componente 'Cards'
+    useEffect(() => {
+        FalseFetch()
+            .then(datos => setData(datos))
+            .catch(err => console.log(err))
+            .finally(() => console.log("llego esta data: " + data))
+    },[]);                                                                  
 
     return (
         <BrowserRouter>
