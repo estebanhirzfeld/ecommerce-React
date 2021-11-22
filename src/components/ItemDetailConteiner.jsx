@@ -20,6 +20,7 @@ function ItemDetailContainer(props) {
                     <p  className="my-5" >
                     El Apple iPhone 13 Pro llega manteniendo el diseño de su predecesor. Con una pantalla OLED de 6.1 pulgadas con tasa de refresco variable de hasta 120Hz, el iPhone 13 Pro cuenta con el procesador A15 Bionic con opciones de 128GB, 256GB, 512GB, y 1TB.
                     </p>
+                    <h3>Stock: {data[1].stock}</h3>
                     <ItemCounter></ItemCounter>
                 </div>
             </div>
