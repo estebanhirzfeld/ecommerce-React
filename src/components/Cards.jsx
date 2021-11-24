@@ -2,12 +2,12 @@ import React from 'react';
 
 import Card from './Card'
 
-// Las Cards no son mas que un conjunto de Card individuales
+//  Las Cards no son mas que un conjunto de Card individuales
 
 function Cards(props) {
 
     return (
-        props.products.length > 0                          //Operador Ternario para saber si llegan los datos y que estos aparezcan o de lo contrario se dibuje un <p>
+        props.products.length > 0                          // Operador Ternario para saber si llegan los datos y que estos aparezcan o de lo contrario se dibuje un <p>
             ?
 
             props.products.map((product, index) =>
@@ -21,7 +21,7 @@ function Cards(props) {
                 />
             )
             :
-            <p>No se Encontraron Productos</p>          // Le da feedback al usuario para saber que esta pasando al momento de visualizar la web
+            <p>No se Encontraron Productos</p>          //  Le da feedback al usuario para saber que esta pasando al momento de visualizar la web
     )
 
 }

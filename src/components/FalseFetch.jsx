@@ -1,11 +1,11 @@
 import {data} from '../JSON/FalseJson'
 
-// Se simula la solicitud de datos (Delay de 3 segundos)
+//  Se simula la solicitud de datos (Delay de 3 segundos)
 
 
 let is_ok = true;
 
-const FalseFetch = () => {                               //Simulamos el delay de una request a una api, por eso utilizamos esta funcion y solicitamos la data desde un archivo local
+const FalseFetch = () => {                               // Simulamos el delay de una request a una api, por eso utilizamos esta funcion y solicitamos la data desde un archivo local
     return new Promise((resolve, reject) => {
         setTimeout(() => {
         if (is_ok){

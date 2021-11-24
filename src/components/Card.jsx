@@ -10,7 +10,7 @@ import ItemCounter from './ItemCounter'
 function Card (props){
         return (
             <div className="col-6 col-sm-4 col-md-4 col-lg-3">
-                <Link to={`/iPhone/Model/${props.iPhoneModel}/${props.id}/Detail`}>  
+                <Link to={`/iPhone/Model/${props.iPhoneModel}/${props.id}/Detail`}>  {/*//Link para Routear los Details de los Modelos */} 
                 <div className="overflow-hidden">
                     <img className="w-100 cardImage" src={props.image} alt="" />
                 </div>
