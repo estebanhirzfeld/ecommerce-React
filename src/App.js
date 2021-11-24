@@ -18,7 +18,6 @@ function App() {
         FalseFetch()
             .then(datos => setData(datos))
             .catch(err => console.log(err))
-            .finally(() => console.log("llego esta data: " + data))
     },[]);                                                                  
 
     return (
@@ -26,7 +25,8 @@ function App() {
             <NavBar />
         <Routes>
             <Route path="/" element = {<CardContainer products={data} />}/>
-            <Route path="/iPhoneModel/:nroDeModelo" element = {<CardContainer products={data} />}/>
+            <Route path="/iPhone/Model/" element = {<CardContainer products={data} />}/>
+            <Route path="/iPhone/Model/:nroModeloiPhone" element = {<CardContainer products={data} />}/>
             <Route path="/Item" element = {<ItemDetailContainer/>}/>
         </Routes> 
         </BrowserRouter>

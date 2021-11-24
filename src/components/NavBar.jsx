@@ -12,24 +12,24 @@ function NavBar() {
     return (
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand  href="/">eCommerce</Navbar.Brand>
+                <Navbar.Brand as={Link} to={"/"} >eCommerce</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="/">INICIO</Nav.Link>
+                        <Nav.Link as={Link} to={"/"} >INICIO</Nav.Link>
                         <NavDropdown title="IOS" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="/iPhoneModel/13-Pro"> iPhone 13 Pro</NavDropdown.Item>
-                            <NavDropdown.Item href="/iPhoneModel/13">     iPhone 13</NavDropdown.Item>
-                            <NavDropdown.Item href="/iPhoneModel/12-Pro"> iPhone 12 Pro</NavDropdown.Item>
-                            <NavDropdown.Item href="/iPhoneModel/12">     iPhone 12</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to={"/iPhone/Model/13 Pro"}> iPhone 13 Pro</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to={"/iPhone/Model/13"    }> iPhone 13</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to={"/iPhone/Model/12 Pro"}> iPhone 12 Pro</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to={"/iPhone/Model/12"    }> iPhone 12</NavDropdown.Item>
                         </NavDropdown>
 
                         <NavDropdown title="ANDROID" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="/androidModel">Samsung</NavDropdown.Item>
-                            <NavDropdown.Item href="/androidModel">Xiaomi</NavDropdown.Item>
-                            <NavDropdown.Item href="/androidModel">Google</NavDropdown.Item>
-                            <NavDropdown.Item href="/androidModel">Huawei</NavDropdown.Item>
-                            <NavDropdown.Item href="/androidModel">Sony</NavDropdown.Item>
+                            <NavDropdown.Item  as={Link} to={"android/brand/Samsung"}>Samsung</NavDropdown.Item>
+                            <NavDropdown.Item  as={Link} to={"android/brand/Xiaomi"}>Xiaomi</NavDropdown.Item>
+                            <NavDropdown.Item  as={Link} to={"android/brand/Google"}>Google</NavDropdown.Item>
+                            <NavDropdown.Item  as={Link} to={"android/brand/Huawei"}>Huawei</NavDropdown.Item>
+                            <NavDropdown.Item  as={Link} to={"android/brand/Sony"}>Sony</NavDropdown.Item>
                         </NavDropdown>
                         <SearchBar/>
                     </Nav>
