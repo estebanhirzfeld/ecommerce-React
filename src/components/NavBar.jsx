@@ -4,8 +4,6 @@ import { Nav, Navbar, NavDropdown, Container} from 'react-bootstrap';
 
 import { BsCart3 } from 'react-icons/bs';
 
-import SearchBar from './SearchBar'
-
 
 function NavBar() {
     return (
@@ -30,7 +28,6 @@ function NavBar() {
                             <NavDropdown.Item  as={Link} to={"android/brand/Huawei"}>Huawei</NavDropdown.Item>
                             <NavDropdown.Item  as={Link} to={"android/brand/Sony"}>Sony</NavDropdown.Item>
                         </NavDropdown>
-                        <SearchBar/>
                     </Nav>
                     <Nav>
                         <Nav.Link href="">Log In</Nav.Link>
