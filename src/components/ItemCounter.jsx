@@ -1,29 +1,28 @@
 import React from 'react'
-import '../App.css';
-import { Nav, Navbar, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button, Table, ButtonGroup, Grid, Panel, FormGroup, FormControl, Container, Row, Col, Form } from 'react-bootstrap';
 
-import Card from './Card'
-import $ from "jquery";
-import { GrFormSubtract, GrFormTrash, GrFormAdd } from 'react-icons/gr';
+import '../App.css';
+
+// Eliminado GrFormTrash
+import { GrFormSubtract, GrFormAdd } from 'react-icons/gr';
 import { HiOutlineShoppingCart } from 'react-icons/hi';
 
 function ItemCounter() {
-    const [itemCount, setItemCount] = React.useState(0);
+    const [itemCount, setItemCount] = React.useState(0);        //Estado inicial del Contador
     let stock =10;
-    const Incrementar = () => {
+    const Incrementar = () => {                                 //si el boton se pulsa, Incrementa el State del Contador
         if(stock > itemCount){
             setItemCount(itemCount + 1)
         }
     }
-    const Decrementar = () => {
+    const Decrementar = () => {                                 //si el boton se pulsa, Decrementa el State del Contador
         if(itemCount > 0 ){
             setItemCount(itemCount - 1)
         }
     }
-    const Vaciar = () => {setItemCount(0)}
+    const Vaciar = () => {setItemCount(0)}                      //si el boton se pulsa, vuelve a 0 el State del Contador
 
-    const AgregarAlCarrito = () => {
-        switch(itemCount) {
+    const AgregarAlCarrito = () => {                            // Con un Switch muestro un Mje al usuario para hacerle saber cuantos items agrego al carrito           
+        switch(itemCount) {                          
             case 0:
                 alert("Seleccione la Cantidad de Productos que Quiere Agregar al Carrito")
                 break;

@@ -1,9 +1,8 @@
 import React from 'react'
-import { Nav, Navbar, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button, Table, ButtonGroup, Grid, Panel, FormGroup, FormControl, Container, Row, Col, Form } from 'react-bootstrap';
+import {Link} from 'react-router-dom'
+import { Nav, Navbar, NavDropdown, Container} from 'react-bootstrap';
 
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
 import { BsCart3 } from 'react-icons/bs';
-
 
 import SearchBar from './SearchBar'
 

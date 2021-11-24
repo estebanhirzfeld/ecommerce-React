@@ -1,30 +1,31 @@
 import {React, useState, useEffect} from 'react'
 import { useParams } from 'react-router';
+
 import '../App.css';
-import { Nav, Navbar, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button, Table, ButtonGroup, Grid, Panel, FormGroup, FormControl, Container, Row, Col, Form } from 'react-bootstrap';
 
 import Cards from './Cards'
 
+// Se dibujan los datos en CardConteiner por eso (se solicitan Cards)
 
 function CardContainer(props) {
-    const {nroModeloiPhone} = useParams();   //Hook de Router Dom con el id de la linea 30 de App.js
+    const {nroModeloiPhone} = useParams("");   //Hook de Router Dom con el id de la linea 30 de App.js
     const [productos,setProductos] = useState(props.products);
 
     
     useEffect(() => {
 
-        if(nroModeloiPhone != undefined){
-            const filterByName = props.products.filter(function (product) {
-                return product.iPhoneModel == nroModeloiPhone
+        if(nroModeloiPhone !== undefined){
+            const filterByName = props.products.filter(function (product) { // Al utilizar el Hook de Router Dom, se necesita un if para verificar se ese "nroModeloiPhone" es undefined
+                return product.iPhoneModel === nroModeloiPhone               //porque sino, no se dibujaria nada en el Home ni en ninguna ruta que sea diferente a undefined
+                console.log(nroModeloiPhone)
             })
             setProductos(filterByName);
         } else{
-            setProductos(props.products);
+            setProductos(props.products);                                    //si es undefined, la data viene sin filtro desde props
 
         }
 
-    },);
-    console.log(productos)
+    },[nroModeloiPhone, props.products]);
 
 
     
