@@ -1,14 +1,20 @@
-import { React, useState } from 'react'
+import { React, useState, useContext } from 'react'
 import { Link } from 'react-router-dom';
 import '../App.css';
+
+import {CartContext} from './CartContext'
 
 //  Eliminado GrFormTrash
 import { GrFormSubtract, GrFormAdd } from 'react-icons/gr';
 import { HiOutlineShoppingCart } from 'react-icons/hi';
 
-function ItemCounter() {
+function ItemCounter(props) {
+    
     const [itemCount, setItemCount] = useState(0);        // Estado inicial del Contador
-    const [itemInChart, setItemInChart] = useState(0);
+    const [itemInChart, setItemInChart] = useState(0);  
+    const [itemId, setitemId] = useState(props.item);   // Id del item que se esta mostrando
+
+    const test = useContext(CartContext);
 
     let stock = 10;
     const Incrementar = () => {                                 // si el boton se pulsa, Incrementa el State del Contador
@@ -24,7 +30,7 @@ function ItemCounter() {
     const Vaciar = () => { setItemCount(0) }                      // si el boton se pulsa, vuelve a 0 el State del Contador
 
     const AgregarAlCarrito = () => {                            //  Con un Switch muestro un Mje al usuario para hacerle saber cuantos items agrego al carrito           
-
+        
 
         switch (itemCount) {
             case 0:
@@ -33,16 +39,18 @@ function ItemCounter() {
             case 1:
                 alert("Se Agrego " + itemCount + " Producto al Carrito")
                 setItemInChart(itemCount);
+                test.addToCart(itemId,itemCount);
                 break;
             default:
                 alert("Se Agregaron " + itemCount + " Productos al Carrito")
                 setItemInChart(itemCount);
+                test.addToCart(itemId,itemCount);
                 break;
         }
     }
 
     return (
-        itemInChart == 0                          // Operador Ternario para saber si llegan los datos y que estos aparezcan o de lo contrario se dibuje un <p>
+        itemInChart === 0                          // Operador Ternario para saber si llegan los datos y que estos aparezcan o de lo contrario se dibuje un <p>
             ?
 
             <div className="container py-3">

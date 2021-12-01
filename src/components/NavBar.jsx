@@ -31,7 +31,7 @@ function NavBar() {
                     </Nav>
                     <Nav>
                         <Nav.Link href="">Log In</Nav.Link>
-                        <Nav.Link href=""><BsCart3/></Nav.Link>
+                        <Nav.Link  as={Link} to={"/Chart"}><BsCart3/></Nav.Link>
                         <Nav.Link eventKey={2} href="">
                         </Nav.Link>
                     </Nav>

@@ -17,7 +17,9 @@ function Card (props){
                 </Link>
                     <span>{props.title}</span>
                     <span>Stock: {props.stock}</span>
-                    <ItemCounter/>
+                    <ItemCounter
+                    item={props}
+                    />
             </div>
         )
 }

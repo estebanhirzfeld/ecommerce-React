@@ -6,7 +6,7 @@ import CardContainer from './components/CardContainer'
 import ItemDetailContainer from './components/ItemDetailConteiner'
 import FalseFetch from './components/FalseFetch'
 import Chart from './components/Chart'
-
+import CartContextProvider from './components/CartContext'
 
 
 
@@ -20,6 +20,7 @@ function App() {
     },[]);                                                                  
 
     return (
+        <CartContextProvider>
         <BrowserRouter>
             <NavBar />
         <Routes>
@@ -30,6 +31,7 @@ function App() {
             <Route path="/Chart" element = {<Chart/>}/>
         </Routes> 
         </BrowserRouter>
+        </CartContextProvider>
     )
 }
 
