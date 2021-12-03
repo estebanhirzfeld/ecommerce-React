@@ -17,6 +17,7 @@ function Cards(props) {
             color={product.color}
             image={product.image}
             stock={product.stock}
+            price={product.price}
             id={product.id}
             iPhoneModel={product.iPhoneModel}
             />

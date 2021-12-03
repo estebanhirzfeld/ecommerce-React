@@ -14,6 +14,7 @@ function ItemCounter(props) {
     const [itemInChart, setItemInChart] = useState(0);  
     const [itemId, setitemId] = useState(props.item);   // Id del item que se esta mostrando
 
+    console.log(itemId)
     const test = useContext(CartContext);
 
     let stock = 10;
@@ -87,33 +88,3 @@ function ItemCounter(props) {
 
 
 export default ItemCounter
-
-
-
-
-    // (
-    //     <div className="container py-3">
-    //         <div className="row d-flex justify-content-center">
-
-
-    //             <button onClick={Decrementar} className="col-4 col-sm-4 col-md-4 col-lg-4 botonDecrementar btn-outline-primary">
-    //                 <span><GrFormSubtract /></span>
-    //             </button>
-
-    //             <button onClick={Vaciar} className="col-2 col-sm-2 col-md-2 col-lg-2 botonVaciar btn-outline-danger">
-    //                 <span>{itemCount}</span>
-    //             </button>
-
-    //             <button onClick={Incrementar} className="col-4 col-sm-4 col-md-4 col-lg-4 botonIncrementar btn-outline-success">
-    //                 <span id="spanIncrementar"><GrFormAdd /></span>
-    //             </button>
-
-    //             <button onClick={AgregarAlCarrito} className="col-10 col-sm-10 col-md-10 col-lg-10 mt-2 botonCarrito btn-outline-primary">
-    //                 <span><HiOutlineShoppingCart /></span>
-    //             </button>
-
-    //             <button className="btn-outline-success col-10 col-sm-10 col-md-10 col-lg-10 py-2"><span>Ir al Checkout</span></button>
-    //         </div>
-
-    //     </div>
-    // )

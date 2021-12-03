@@ -14,6 +14,7 @@ const CartContextProvider = ({children}) => {
                 item:item.id,
                 name:item.iPhoneModel,
                 image:item.image,
+                price:item.price,
                 color:item.color,
                 cantItem:cantItem
             }

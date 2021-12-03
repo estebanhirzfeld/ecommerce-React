@@ -15,22 +15,27 @@ function Chart() {
     }
 
     return (
-
-
         test.cartList.length > 0                     // Operador Ternario para saber si llegan los datos y que estos aparezcan o de lo contrario se dibuje un <p>
             ?
         
             test.cartList.map((item, index) =>
                 <div>
                     <div className="container">
-                        <div className="row d-flex justify-content-center align-items-center">
-                            <div className="col-lg-3"><img className="col-lg-12" src={item.image} alt="" /></div>
-                            <div className="col-lg-3"><p>Item: {item.name}</p></div>
-                            <div className="col-lg-3"><p>Color: {item.color}</p></div>
-                            <div className="col-lg-2"><p>Cant: {item.cantItem}</p></div>
-                            <div className="col-lg-1"><button onClick={() => QuitarItem((item.item))}><span>Borrar Item</span></button></div>
+                        <div className="row d-flex justify-content-center align-items-center text-center">
+                            <div className="col-12 col-lg-3"><img className="col-12 col-lg-12" src={item.image} alt="" /></div>
+                            <div className="col-3 col-lg-2">
+                                <p>iPhone {item.name}</p>
+                                </div>
+                            <div className="col-3 col-lg-2"><p>Color: {item.color}</p></div>
+                            <div className="col-12 col-lg-3">
+                                <p>Precio: {'$'}{item.price}</p>
+                                <p>Cant: {item.cantItem}</p>
+                                <p>SubTotal: {'$'}{item.price * item.cantItem}</p>
+                                </div>
+                            <div className="col-12 col-lg-2 "><button className="btn-outline-danger" onClick={() => QuitarItem((item.item))}><span>Borrar Item</span></button></div>
                         </div>
                     </div>
+                    <hr />
                 </div>
             )
             :
