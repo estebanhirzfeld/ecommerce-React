@@ -1,4 +1,4 @@
-import {data} from '../JSON/FalseJson'
+import {data} from '../Utils/FalseJson'
 
 //  Se simula la solicitud de datos (Delay de 3 segundos)
 
